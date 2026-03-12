@@ -5,7 +5,9 @@
 <title>AccessibleIconGenerator</title>
 
 <link rel="stylesheet" href="style.css">
-<script src="app.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+<script src="code.js"></script>
 <script src="modules/speech.js"></script>
 
 </head>
@@ -18,7 +20,7 @@
 
 <label for="iconStyle">Icon style</label><br>
 
-<select id="iconStyle">
+<select id="iconStyle" onchange="toggleCustomText()">
 <option value="123">123</option>
 <option value="?">?</option>
 <option value="custom">Custom text</option>
@@ -26,8 +28,14 @@
 
 <br><br>
 
+<div id="customTextSection" style="display:none">
+
 <label for="customText">Custom text</label><br>
-<input id="customText" type="text"><br><br>
+<input id="customText" type="text">
+
+</div>
+
+<br><br>
 
 <label for="bgColor">Background color</label><br>
 
@@ -54,16 +62,42 @@
 
 <br><br>
 
+<fieldset>
+
+<legend>Icon sizes</legend>
+
+<label><input type="checkbox" value="48"> 48</label><br>
+<label><input type="checkbox" value="72"> 72</label><br>
+<label><input type="checkbox" value="96"> 96</label><br>
+<label><input type="checkbox" value="128"> 128</label><br>
+<label><input type="checkbox" value="144"> 144</label><br>
+<label><input type="checkbox" value="192" checked> 192</label><br>
+<label><input type="checkbox" value="256"> 256</label><br>
+<label><input type="checkbox" value="384"> 384</label><br>
+<label><input type="checkbox" value="512" checked> 512</label><br>
+
+</fieldset>
+
+<br><br>
+
 <button onclick="generatePreview()">Generate Preview</button><br>
-<button onclick="downloadIcons()">Generate Download Links</button><br>
+<button onclick="downloadIcons()">Generate Icon Pack (ZIP)</button><br>
+
+<div id="previewSection" style="display:none">
 
 <h2>Preview</h2>
 
-<canvas id="previewCanvas" width="192" height="192"></canvas>
+<canvas id="previewCanvas" width="192" height="192" aria-label="Icon preview"></canvas>
 
-<h2>Downloads</h2>
+</div>
+
+<div id="downloadSection" style="display:none">
+
+<h2>Download</h2>
 
 <div id="downloads"></div>
+
+</div>
 
 </body>
 </html>

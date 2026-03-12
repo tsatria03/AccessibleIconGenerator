@@ -1,0 +1,6 @@
+New in 1.0.
+Replaced the list selector for icon sizes with actual multi selectable checkboxes.
+Added zip generation for icons to the downloads section of the page.
+Added automatic manifest.json generation to the downloads section of the page.
+Made it so the headings for generating and downloading icons are now hidden unless the buttons associated with them are pressed.
+Added a combo box for selecting common icon sizes.
