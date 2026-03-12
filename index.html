@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AccessibleIconGenerator</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="app.js"></script>
+<script src="modules/speech.js"></script>
+
+</head>
+
+<body>
+
+<div id="notification-area" aria-live="assertive" aria-atomic="true"></div>
+
+<h1>AccessibleIconGenerator</h1>
+
+<label for="iconStyle">Icon style</label><br>
+
+<select id="iconStyle">
+<option value="123">123</option>
+<option value="?">?</option>
+<option value="custom">Custom text</option>
+</select>
+
+<br><br>
+
+<label for="customText">Custom text</label><br>
+<input id="customText" type="text"><br><br>
+
+<label for="bgColor">Background color</label><br>
+
+<select id="bgColor">
+<option value="#000000">Black</option>
+<option value="#ffffff">White</option>
+<option value="#0044cc">Blue</option>
+<option value="#008800">Green</option>
+<option value="#880000">Red</option>
+<option value="#444444">Gray</option>
+</select>
+
+<br><br>
+
+<label for="textColor">Text color</label><br>
+
+<select id="textColor">
+<option value="#ffffff">White</option>
+<option value="#000000">Black</option>
+<option value="#ffff00">Yellow</option>
+<option value="#00ffff">Cyan</option>
+<option value="#ff8800">Orange</option>
+</select>
+
+<br><br>
+
+<button onclick="generatePreview()">Generate Preview</button><br>
+<button onclick="downloadIcons()">Generate Download Links</button><br>
+
+<h2>Preview</h2>
+
+<canvas id="previewCanvas" width="192" height="192"></canvas>
+
+<h2>Downloads</h2>
+
+<div id="downloads"></div>
+
+</body>
+</html>
