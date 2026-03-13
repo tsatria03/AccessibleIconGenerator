@@ -83,7 +83,7 @@ function generatePreview()
     ctx.clearRect(0,0,preview.width,preview.height);
     ctx.drawImage(icon,0,0);
 
-    speak("Preview generated.");
+    speak("Icon preview generated.");
 }
 
 function createManifest(sizes)
@@ -156,5 +156,5 @@ async function downloadIcons()
     downloads.innerHTML = "";
     downloads.appendChild(link);
 
-    speak("Icon pack ready for download.");
+    speak("Icon pack generated for download.");
 }
