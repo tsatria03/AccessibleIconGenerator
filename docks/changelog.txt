@@ -1,4 +1,5 @@
 New in 1.0.
+Fixed some issues with validating checkboxes for choosing icon sizes.
 Replaced the list selector for icon sizes with actual multi selectable checkboxes.
 Added zip generation for icons to the downloads section of the page.
 Added automatic manifest.json generation to the downloads section of the page.
